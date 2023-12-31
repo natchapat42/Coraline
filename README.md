@@ -9,10 +9,12 @@
  
 Then, You can follow these step :
 
-1. You can config database_credential depend on your database ( eg. host, user, password ) in json.file
+1. Config database_credential depend on your database ( e.g. host, user, password ) in json.file
      *  " *.\credential\postgresql_credentials.json* "
-2. All data that you want to append to Postgresql database must be save into sales_data folder
+2. All data that you want to append to Postgresql database **must!** be save into sales_data folder
      *  as form " *.\sales_data\xxx.csv* "
-
+       
 Then, you can run a python script ( *script.py* ) to append all data to Postgresql database 
-and sql script ( *Q2.sql* ) for create table 'cat_reg' from question 2. 
+and sql script ( *Q2.sql* ) for create table 'cat_reg' from question 2.
+
+*   P.S. I choose to clean and save data as csv files because data has only 1 file. But if we have many files and a fixed format, then I can create a function to split data from xlsx.file by filter data (e.g., e.g. Region or City column).
